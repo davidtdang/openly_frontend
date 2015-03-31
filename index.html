@@ -17,15 +17,18 @@
         <div id="map"></div>
       </div>
 
-      <div class="four wide column" id="sidebar_grid">
-        <form id="search-form" action="" method="">
-          <div class="ui search">
-            <center>
-              <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Zip Code">
-                <i class="search icon"></i>
-              </div>
-            </center>
+      <div class="four wide column">
+          <form id="search-form" action="" method="">
+            <div class="ui action fluid input">
+              <input type="text" placeholder="Zip Code">
+              <button class="ui teal icon button "><i class="large marker icon"></i></button>
+            </div>
+          </form>
+
+          <div id="search-results" class="">
+
+          </div>
+      </div>
 
             <div class="results">
 
@@ -39,8 +42,45 @@
 
     <!-- TEMPLATE -->
     <script id="search-results-template" type="text/x-handlebars-template">
-        <div class="ui styled fluid accordion">
+      <div class="ui styled fluid accordion">
+        {{#each venues}}
+        <div class="venue"
+          data-coordinates="{{geocoords}}"
+          data-name="{{name}}"
+          data-address="{{address}}"
+          data-phone="{{phone}}"
+          >
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <span class="pull-right">[Time]</span>
+            {{name}}
+          </div>
+          <div class="content">
+            <div class="ui list">
+              <div class="item">
+                <img src="{{star_rating}}" alt="{{rating}} stars" />
+              </div>
+              <div class="item">
+                {{review_count}} Reviews
+              </div>
+              <div class="item">
+                {{address}}
+              </div>
+              <div class="item">
+                {{phone}}
+              </div>
+              <div class="item">
+                {{#each categories}}
+                <div class="ui teal label">
+                  {{this}}
+                </div>
+                {{/each}}
+              </div>
+            </div>
+          </div>
         </div>
+        {{/each}}
+      </div>
     </script>
 
 
