@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Openly</title>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
@@ -16,16 +17,22 @@
 
 
     <div class="ui grid">
-      <div class="thirteen wide column" id="map_grid">
+      <div class="twelve wide column" id="map_grid">
         <div id="map"></div>
       </div>
 
-      <div class="three wide column">
+      <div class="four wide column">
           <form id="search-form" action="" method="">
-            <div class="ui action fluid input">
+            <!-- <div class="ui action fluid input">
               <input type="text" placeholder="Zip Code" id="searchbox">
-              <button class="ui icon button circular colored"><i class="large marker icon"></i></button>
+              <button class="ui icon button colored"><center><i class="large marker icon"></i></center></button>
+            </div> -->
+            <center>
+            <div class="ui input">
+              <input type="text" placeholder="Zip Code" id="searchbox">
+              <button class="ui icon circular button colored"><i class=" marker icon"></i></button>
             </div>
+          </center>
           </form>
 
           <div id="search-results" class="">
@@ -54,10 +61,9 @@
           data-phone="{{phone}}"
           >
           <div class="title">
-            <i class="dropdown icon"></i>
             <span class="pull-right">
               <!-- [Time] -->
-              <div class="venue-list-name">{{name}}</div>
+              <div class="venue-list-name"><i class="dropdown icon"></i>{{name}}</div>
               </span>
           </div>
           <div class="content">
@@ -70,14 +76,14 @@
                 {{review_count}} Reviews
               </div> -->
               <div class="item address-text">
-                {{address}}
+                <i class="large map icon"></i>  {{address}}
               </div>
               <div class="item phone-text">
-                {{phone}}
+                <i class="large mobile icon"></i>{{phone}}
               </div>
               <div class="item">
                 {{#each categories}}
-                <div class="ui teal label">
+                <div class="ui label category">
                   {{this}}
                 </div>
                 {{/each}}
