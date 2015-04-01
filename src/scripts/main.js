@@ -13,6 +13,7 @@ $("#search-results").on("click", ".venue", function() {
   var name = $(this).data("name");
   var address = $(this).data("address");
   var phone = $(this).data("phone");
+  var rating = $(this).data("rating");
 
   var venue = {
     coords: [parseFloat(divCoords[0]), parseFloat(divCoords[1])],

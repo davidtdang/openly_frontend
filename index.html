@@ -16,7 +16,7 @@
     </nav>
 
 
-    <div class="ui grid">
+    <div class="ui stackable grid">
       <div class="twelve wide column" id="map_grid">
         <div id="map"></div>
       </div>
@@ -29,7 +29,7 @@
             </div> -->
             <center>
             <div class="ui input">
-              <input type="text" placeholder="Zip Code" id="searchbox">
+              <input type="text" placeholder="Search Venue" id="searchbox">
               <button class="ui icon circular button colored"><i class=" marker icon"></i></button>
             </div>
           </center>
@@ -63,6 +63,7 @@
           <div class="title">
             <span class="pull-right">
               <!-- [Time] -->
+              <i class= "yellow star icon">{{rating}}</i>
               <div class="venue-list-name"><i class="dropdown icon"></i>{{name}}</div>
               </span>
           </div>
@@ -83,7 +84,7 @@
               </div>
               <div class="item">
                 {{#each categories}}
-                <div class="ui label category">
+                <div class="ui label tag category">
                   {{this}}
                 </div>
                 {{/each}}
