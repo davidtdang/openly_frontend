@@ -36,13 +36,12 @@ function searchAction(searchTerm) {
     url: url,
     method: "post",
     data:{
-      "s":query // params[:s]
+      "s":query
     }
   };
 
   $.ajax(req)
     .done(function (res) {
-      console.log(res);
       // append to list
       setSearchResultsTemplate({venues:res});
     })
@@ -76,12 +75,12 @@ function addMarker(venue) {
     },
     properties: {
         title: venue.name,
-        description: "<div>"+ venue.address +"</div>" + "<div>"+ venue.phone +"</div>"
+        description: "<div>"+ venue.address +"</div>" + "<div>"+ venue.phone +"</div>",
         // description: venue.address,
         // one can customize markers by adding simplestyle properties
         // https://www.mapbox.com/guides/an-open-platform/#simplestyle
-        // 'marker-size': 'large',
-        // 'marker-color': '#BE9A6B',
+        'marker-size': 'large',
+        'marker-color': '#FC3A57',
         // 'marker-symbol': 'cafe'
 
     }

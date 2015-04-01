@@ -14,6 +14,36 @@
   margin: 0;
 }
 
+.ui.styled.fluid.accordion{
+
+}
+
+#searchbox{
+  background: #fc3a57; /* Old browsers */
+  background: -moz-linear-gradient(left,  #fc3a57 1%, #ff9f89 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(1%,#fc3a57), color-stop(100%,#ff9f89)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #fc3a57 1%,#ff9f89 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #fc3a57 1%,#ff9f89 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #fc3a57 1%,#ff9f89 100%); /* IE10+ */
+  background: linear-gradient(to right,  #fc3a57 1%,#ff9f89 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc3a57', endColorstr='#ff9f89',GradientType=1 ); /* IE6-9 */
+  opacity: 0.6;
+  color: white;
+  border: 0;
+}
+
+.ui.icon.button.colored{
+  background: #48cec7; /* Old browsers */
+background: -moz-linear-gradient(left,  #48cec7 0%, #6ed3d0 16%, #99e5cd 82%, #aee2d2 99%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48cec7), color-stop(16%,#6ed3d0), color-stop(82%,#99e5cd), color-stop(99%,#aee2d2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* IE10+ */
+background: linear-gradient(to right,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48cec7', endColorstr='#aee2d2',GradientType=1 ); /* IE6-9 */
+color: white;
+}
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
@@ -55,15 +85,15 @@ button{
   border: 0;
 }
 
-h2 {
+.nav_title {
   padding-top: 8px;
   color: white;
 }
 
 body {
   margin-top: 60px;
-  /*background-color: white;*/
-  background-color: #2E3C4A;
+  background-color: white;
+  /*background-color: #2E3C4A;*/
 
   /*background: #ff9f89; /* Old browsers */*/
 /*background: -moz-linear-gradient(top,  #ff9f89 0%, #fc3a57 100%); /* FF3.6+ */*/

@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav class="fixed-nav-bar">
-      <center><h2>OPENLY</h2></center>
+      <center><h2><div class="nav_title">OPENLY</div></h2></center>
     </nav>
 
 
@@ -20,8 +20,8 @@
       <div class="four wide column">
           <form id="search-form" action="" method="">
             <div class="ui action fluid input">
-              <input type="text" placeholder="Zip Code">
-              <button class="ui teal icon button "><i class="large marker icon"></i></button>
+              <input type="text" placeholder="Zip Code" id="searchbox">
+              <button class="ui icon button colored"><i class="large marker icon"></i></button>
             </div>
           </form>
 
@@ -53,7 +53,7 @@
           <div class="title">
             <i class="dropdown icon"></i>
             <span class="pull-right">[Time]</span>
-            {{name}}
+            <div class="venue-list-name">{{name}}</div>
           </div>
           <div class="content">
             <div class="ui list">
