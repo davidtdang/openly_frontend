@@ -186,3 +186,8 @@ body, html {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+.container > svg {
+    display: block;
+    width: 100%;
+}

@@ -9,14 +9,15 @@ map = L.mapbox.map('map', 'daviddang.ljfi6cpf').setView([37.767, -122.436], 13);
 
 
 $("#search-results").on("click", ".venue", function() {
-  var divCoords = $(this).data("coordinates").split(',');
+  var divCoords = $(this).data("coordinates").split(",");
+  var geocoords = [parseFloat(divCoords[0]), parseFloat(divCoords[1])]
   var name = $(this).data("name");
   var address = $(this).data("address");
   var phone = $(this).data("phone");
-  var rating = $(this).data("rating");
+  // var rating = $(this).data("rating");
 
   var venue = {
-    coords: [parseFloat(divCoords[0]), parseFloat(divCoords[1])],
+    coords: geocoords,
     name: name,
     address: address,
     phone: phone
@@ -32,7 +33,7 @@ $("#search-form").on("submit", function (e) {
 
 function searchAction(searchTerm) {
   var query = searchTerm.replace(/\s/g, "+");
-  var url = "http://localhost:3000/search_yelp";
+  var url = "http://localhost:3000/search";
   var req = {
     url: url,
     method: "post",
@@ -44,6 +45,7 @@ function searchAction(searchTerm) {
   $.ajax(req)
     .done(function (res) {
       // append to list
+      console.log(res);
       setSearchResultsTemplate({venues:res});
     })
     .fail(function () {
