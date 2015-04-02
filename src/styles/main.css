@@ -1,13 +1,13 @@
 #map {
   width:100%;
   height:100vh;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 #map_grid {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
 }
 
 #search-form {
@@ -19,8 +19,12 @@
   margin-right: 20px;
   position: relative;
 
+
 }
 
+.four.wide.column{
+  padding: 0px;
+}
 
 #search-form{
   margin-top: 22px;
@@ -52,6 +56,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6113f', end
   font-weight: 900;
   border-radius: 38px;
   position: relative;
+
 }
 
 .ui.icon.button.colored{
@@ -66,6 +71,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6113f', end
   color: white;
   margin-right: 10px;
   margin-left: 10px;
+
 }
 
 .fixed-nav-bar {
@@ -74,7 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6113f', end
   left: 0;
   z-index: 9999;
   width: 100%;
-  height: 50px;
+  height: 60px;
 
   /*background-color: #77EDD5;*/
 
@@ -87,7 +93,7 @@ background: -o-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2
 background: -ms-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* IE10+ */
 background: linear-gradient(to right,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48cec7', endColorstr='#aee2d2',GradientType=1 ); /* IE6-9 */
-  box-shadow: 0px 10px 20px rgba(22, 22, 22, 0.15);
+  box-shadow: 0px 10px 20px rgba(22, 22, 22, 0.16);
 
 }
 
@@ -115,7 +121,7 @@ button{
 
 .nav_title {
   font-size: 40px;
-  padding-top: 8px;
+  padding-top: 12px;
   color: white;
   font-family: 'Nixie One', cursive;
 
@@ -146,7 +152,7 @@ button{
 
   float: right;
   color: white;
-  margin: 10px;
+  margin-left: 20px;
 }
 
 
@@ -162,10 +168,21 @@ body {
 .style1 {
 	border-top: 0px;
 	border-bottom: 2px dashed #D1D1D1;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .yellow.star.icon{
   float:right;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-top: 6px;
+}
+
+#search-results {
+  overflow:scroll;
+  height: 85vh;
+}
+
+body, html {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
