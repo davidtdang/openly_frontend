@@ -192,3 +192,28 @@ body, html {
     display: block;
     width: 100%;
 }
+
+.hours_remaining{
+  margin-left: 10px;
+}
+
+#time{
+  font-size: 30px;
+background: -webkit-linear-gradient(#43C199, #6DE099);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: 'Open Sans', sans-serif;
+opacity: 0.8;
+}
+
+#remaining{
+  font-size: 12px;
+  background: -webkit-linear-gradient(#43C199, #6DE099);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
+}
+
+#example2{
+  margin-bottom: 3px;
+}

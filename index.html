@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Openly</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Quattrocento:700' rel='stylesheet' type='text/css'>
@@ -29,7 +31,7 @@
             </div> -->
             <center>
             <div class="ui input">
-              <input type="text" placeholder="Search Venue" id="searchbox">
+              <input type="text" placeholder="Search" id="searchbox">
               <button class="ui icon circular button colored"><i class=" marker icon"></i></button>
             </div>
           </center>
@@ -63,6 +65,9 @@
           <div class="title">
             <span class="pull-right">
               <!-- [Time] -->
+              <div class="hours_remaining">
+                <span id="time">~{{hours}}</span><span id="remaining"> remaining</span>
+              </div>
               <i class= "yellow star icon">{{rating}}</i>
               <div class="venue-list-name"><i class="dropdown icon"></i>{{name}}</div>
               </span>
@@ -76,6 +81,14 @@
               <!-- <div class="item">
                 {{review_count}} Reviews
               </div> -->
+              <div class="ui indicating progress teal" id="example2">
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="label"></div>
+  </div>
+
+
               <div class="item address-text">
                 <i class="large map icon"></i>  {{address}}
               </div>
@@ -83,6 +96,8 @@
                 <i class="large mobile icon"></i>{{phone}}
               </div>
               <div class="item">
+
+
                 {{#each categories}}
                 <div class="ui label tag category">
                   {{this}}
@@ -97,7 +112,6 @@
       </div>
 
     </script>
-
 
 
 

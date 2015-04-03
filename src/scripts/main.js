@@ -14,6 +14,7 @@ $("#search-results").on("click", ".venue", function() {
   var address = $(this).data("address");
   var phone = $(this).data("phone");
   var rating = $(this).data("rating");
+  var hours = $(this).data("hours");
 
   var venue = {
     coords: [parseFloat(divCoords[0]), parseFloat(divCoords[1])],
@@ -29,6 +30,7 @@ $("#search-form").on("submit", function (e) {
   e.preventDefault();
   searchAction($("#search-form input").val());
 });
+
 
 function searchAction(searchTerm) {
   var query = searchTerm.replace(/\s/g, "+");
@@ -99,6 +101,30 @@ $("#search-results").on("click", ".category", function () {
   $("#search-form input").val(category);
   searchAction(category);
 });
+
+$('#example2').progress({
+  percent: 22
+});
+
+
+//
+// $("#search-results").on("click", ".title", function(){
+//   map.featureLayer.eachLayer(function(marker){
+//     if (marker.feature.properties.title == ?????){
+//       marker.openPopup();
+//     }
+//   })
+// })
+
+
+
+//   map.featureLayer.eachLayer(function(marker){
+//     if (marker.feature.properties.name == venue.name){
+//       marker.openPopup();
+//     }
+// });
+// }
+//
 
 // var source   = $("#search-results-template").html();
 // var searchResultsTemplate = Handlebars.compile(source);
