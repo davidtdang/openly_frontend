@@ -74,6 +74,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6113f', end
 
 }
 
+
+
+#usertipbox{
+  background: #48cec7; /* Old browsers */
+  background: -moz-linear-gradient(left,  #48cec7 0%, #6ed3d0 16%, #99e5cd 82%, #aee2d2 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#48cec7), color-stop(16%,#6ed3d0), color-stop(82%,#99e5cd), color-stop(99%,#aee2d2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* IE10+ */
+  background: linear-gradient(to right,  #48cec7 0%,#6ed3d0 16%,#99e5cd 82%,#aee2d2 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48cec7', endColorstr='#aee2d2',GradientType=1 ); /* IE6-9 */
+
+  opacity: 0.55;
+  color: white;
+  border: 0;
+  font-weight: 900;
+  border-radius: 38px;
+  position: relative;
+  margin-top: 10px
+
+}
+
+.ui.icon.button.reverse{
+  background: #d6113f; /* Old browsers */
+background: -moz-linear-gradient(left,  #d6113f 1%, #f47b5d 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(1%,#d6113f), color-stop(100%,#f47b5d)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #d6113f 1%,#f47b5d 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #d6113f 1%,#f47b5d 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #d6113f 1%,#f47b5d 100%); /* IE10+ */
+background: linear-gradient(to right,  #d6113f 1%,#f47b5d 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6113f', endColorstr='#f47b5d',GradientType=1 ); /* IE6-9 */
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  opacity: 0.55;
+  margin-top: 10px
+
+
+}
+
+
+
 .fixed-nav-bar {
   position: fixed;
   top: 0;
@@ -179,6 +221,7 @@ body {
 }
 
 #search-results {
+  margin-top: 20px;
   overflow:scroll;
   height: 85vh;
 }
@@ -216,4 +259,21 @@ opacity: 0.8;
 
 #example2{
   margin-bottom: 3px;
+}
+
+/*#tip_span{
+  color: #48cec7;
+  float:left;
+}*/
+
+#user_tip_button{
+  color: white;
+}
+
+.ui.list{
+  overflow: auto;
+}
+
+.four.wide.column{
+  padding:0;
 }

@@ -18,36 +18,28 @@
     </nav>
 
 
+
     <div class="ui stackable grid">
       <div class="twelve wide column" id="map_grid">
         <div id="map"></div>
       </div>
 
       <div class="four wide column">
-          <form id="search-form" action="" method="">
-            <!-- <div class="ui action fluid input">
-              <input type="text" placeholder="Zip Code" id="searchbox">
-              <button class="ui icon button colored"><center><i class="large marker icon"></i></center></button>
-            </div> -->
-            <center>
+        <form id="search-form" action="" method="">
+          <!-- <div class="ui action fluid input">
+            <input type="text" placeholder="Zip Code" id="searchbox">
+            <button class="ui icon button colored"><center><i class="large marker icon"></i></center></button>
+          </div> -->
+          <center>
             <div class="ui input">
               <input type="text" placeholder="Search" id="searchbox">
               <button class="ui icon circular button colored"><i class=" marker icon"></i></button>
             </div>
           </center>
-          </form>
-
-          <div id="search-results" class="">
-
-          </div>
-      </div>
-
-            <div class="results">
-
-            </div>
-
-          </div>
         </form>
+
+        <div id="search-results" class=""></div>
+
       </div>
 
     </div>
@@ -61,12 +53,13 @@
           data-name="{{name}}"
           data-address="{{address}}"
           data-phone="{{phone}}"
+          data-id="{{id}}"
+          data-db={{"persisted"}}
           >
           <div class="title">
             <span class="pull-right">
-              <!-- [Time] -->
               <div class="hours_remaining">
-                <span id="time">~{{hours}}</span><span id="remaining"> remaining</span>
+                <span id="time">~{{hours_left}}</span><span id="remaining"> remaining</span>
               </div>
               <i class= "yellow star icon">{{rating}}</i>
               <div class="venue-list-name"><i class="dropdown icon"></i>{{name}}</div>
@@ -74,19 +67,15 @@
           </div>
           <div class="content">
             <div class="ui list">
+
               <hr class="style1">
-              <!-- <div class="item">
-                <img src="{{star_rating}}" alt="{{rating}} stars" />
+
+              <!-- <div class="ui indicating progress teal" id="example2">
+                <div class="bar">
+                  <div class="progress"></div>
+                </div>
+                <div class="label"></div>
               </div> -->
-              <!-- <div class="item">
-                {{review_count}} Reviews
-              </div> -->
-              <div class="ui indicating progress teal" id="example2">
-    <div class="bar">
-      <div class="progress"></div>
-    </div>
-    <div class="label"></div>
-  </div>
 
 
               <div class="item address-text">
@@ -95,15 +84,53 @@
               <div class="item phone-text">
                 <i class="large mobile icon"></i>{{phone}}
               </div>
+
+
               <div class="item">
-
-
                 {{#each categories}}
-                <div class="ui label tag category">
-                  {{this}}
-                </div>
+                  <div class="ui label tag category">
+                    {{this}}
+                  </div>
                 {{/each}}
+
+                <!-- TIP BUTTON -->
+                <!-- <div class="ui label tip" id="user_tip_button">
+                    <i class="write icon"></i>+tip
+                </div> -->
+
+                <a class="item user_tip_modal_popup_button">
+                  <i class="write teal icon">+Tip</i>
+                </a>
+
+                <!-- <form class="ui form user-tip-form" data-id="{{id}}" action="" method="">
+                  <center>
+                  <div class="ui input">
+                    <input type="text" placeholder="Share a tip with others" id="usertipbox">
+                    <button class="ui icon circular button reverse"><i class="write icon"></i></button>
+                  </div>
+                </center>
+                </form> -->
+
+                <!-- <form class="ui form user-tip-form" data-id="{{id}}" action="" method=""> ***
+              <div class="ui action fluid input">
+                <input type="text" placeholder="Share tip with others">
+                <button class="tiny ui teal button">
+                  Add tip
+                </button>
               </div>
+            </form> -->
+
+
+                <!-- <div class="ui action fluid input" id>
+                  <input type="text" placeholder="Share a tip with others">
+                  <button class="tiny ui teal button">
+                    +tip
+                  </button>
+                </div>
+              </form> -->
+
+              </div>
+
             </div>
           </div>
         </div>
@@ -112,6 +139,42 @@
       </div>
 
     </script>
+
+    <div id="tipModal" class="ui modal">
+      <i class="close icon"></i>
+      <div class="header">
+        <center>TIPS</center>
+      </div>
+
+      <!-- <div class="user-tip-indicator">
+      {{#if user_tip}}
+        {{user_tip.text}}
+      {{else}}
+        <center>No tips yet, add yours!</center>
+      {{/if}}
+    </div> -->
+
+    <ul class= "tipsList"></ul>
+
+      <div class="content">
+        <form class="ui form userTipForm" data-id="{{id}}" action="" method="">
+          <center>
+            <div class="ui input">
+              <input type="text" placeholder="Share a tip with others" id="usertipbox">
+              <button class="ui icon circular button reverse" type="submit" name="submit"><i class="write icon"></i></button>
+            </div>
+          </center>
+        </form>
+
+
+
+      </div>
+      <div class="actions">
+        <div class="ui button">Close</div>
+        <!-- <div class="ui button">OK</div> -->
+      </div>
+    </div>
+
 
 
 
